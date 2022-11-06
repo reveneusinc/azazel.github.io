@@ -29,7 +29,7 @@ body {
 
 .logo {
   font-size: 30px;
-  color: #4dbf00;
+  color: #e11b04;
 }
 
 .menu-container {
@@ -113,7 +113,7 @@ body {
 .container {
   background-color: #151515;
   min-height: calc(100vh - 50px);
-  color: white;
+  color: red;
 }
 
 .content-container {
