@@ -113,7 +113,7 @@ body {
 .container {
   background-color: #151515;
   min-height: calc(100vh - 50px);
-  color: red;
+  color: white;
 }
 
 .content-container {
@@ -131,7 +131,7 @@ body {
 
 .featured-desc {
   width: 500px;
-  
+  color: lightgray;
   margin: 30px 0;
 }
 
