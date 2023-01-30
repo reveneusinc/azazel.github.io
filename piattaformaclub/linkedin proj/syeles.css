@@ -1,83 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  background-color: #f3f2ef;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.header__left img {
-  object-fit: contain;
-  height: 40px;
-  margin-right: 10px;
-}
-
-.header {
-  width: 100%;
-  display: flex;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  justify-content: space-evenly;
-  border-bottom: 0.1px solid lightgray;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-  background-color: white;
-}
-
-.header__left {
-  display: flex;
-}
-
-.header__right {
-  display: flex;
-}
-
-.header__search {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  height: 22px;
-  color: gray;
-  background-color: #eef3f8;
-}
-
-.header__search > input {
-  outline: none;
-  border: none;
-  background: none;
-}
-
-.headerOption {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 20px;
-  color: gray;
-  cursor: pointer;
-}
-
-.headerOption:hover {
-  color: black;
-}
-
-.headerOption h3 {
-  font-size: 12px;
-  margin-top: 10px;
-  font-weight: 400;
-}
-
-.headerOption__icon {
-  margin-right: 5px;
-  height: 20px;
-  width: 20px;
-}
 
 /* Main Body */
 .body__main {
@@ -88,7 +9,7 @@ body {
   margin-right: 20px;
 }
 /* Sidebar */
-.sidebar {
+ .sidebar {
   position: sticky;
   top: 80px;
   flex: 0.2;
@@ -192,7 +113,7 @@ body {
 .sidebar__bottom > p {
   font-size: 14px;
   padding-bottom: 10px;
-}
+} 
 
 /* Feed */
 .feed {
@@ -337,4 +258,158 @@ body {
 .widgets__articleRight > p {
   font-size: 12px;
   color: gray;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+body {
+    background: #36393f;
+  }
+
+
+nav {
+  position: sticky;
+  top: 0;
+  background: #202225;
+  float: left;
+  height: 100%;
+  width: 72px;
+}
+
+nav a {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%; /* Makes a circle */
+  background: #36393f;
+}
+  
+
+nav {
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack one on top of another */
+  align-items: center; /* Align horizontally */
+  gap: 15px; /* Vertical gap between the links */
+  padding-top: 12px;
+}
+
+
+nav hr {
+  display: block;
+  width: 32px;
+  height: 2px;
+  border-radius: 196px;
+  border: none; /* Removes a white border that exists by default */
+  background: #36393f;
+}
+
+/* dare quel effetto di colore quando il cursore ci passa sopra e farlo anche sembrare "smooth" */
+
+nav a:hover,
+nav a.active {
+  border-radius: 25%;
+  background: #3ba55d;
+}
+
+nav a {
+  transition: border-radius 250ms, background 250ms;
+}
+
+nav a::after { 
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 200px;
+  background: white;
+}
+
+nav a::after {
+  position: absolute;
+  right: 57px; /* Move it 57px to the LEFT (yes, counter-intuitive!) */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav a {
+  position: relative;
+}
+
+
+nav a:hover::after {
+  height: 18px;
+}
+
+nav a.active::after {
+  height: 32px;
+}
+
+
+nav a::after {
+  transition: height 250ms;
+}
+
+
+
+nav a .tooltip {
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+
+  padding: 10px 12px;
+  margin-left: 10px;
+  border-radius: 8px;
+  
+  display: none;
+  width: max-content; /* Be as wide as the text that it contains */
+  
+  background: #000000;
+}
+
+
+nav a .tooltip {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+nav a .tooltip::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+nav a .tooltip::after {
+  border-top:   5px solid transparent;
+  border-bottom:5px solid transparent; 
+  border-right: 5px solid #000000;
+}
+
+
+nav a .tooltip::after {
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+nav a .tooltip {
+  display: none;
+}
+
+
+nav a:hover .tooltip {
+  display: block;
 }
