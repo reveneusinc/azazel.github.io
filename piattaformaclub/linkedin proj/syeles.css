@@ -141,7 +141,9 @@
   font-weight: 0;
 } 
 
-
+.feed__input > form > button {
+  display: none;
+}
 
 .feed__inputOptions {
   display: flex;
